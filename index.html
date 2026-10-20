@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Swathi Chidambaram – Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Newsreader:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fbf6fb;--surface:#fff;--ink:#1d1230;--muted:#5d5070;--line:#e3d6ea;--accent:#c2185b;--accent2:#00798c;--accent-soft:#fde3ef;--run:#6d28d9;--run-soft:#ece3fc;
+--head:"Bricolage Grotesque","Trebuchet MS",system-ui,sans-serif;--body:"Newsreader",Georgia,"Times New Roman",serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d0817;--surface:#171026;--ink:#f3ecfa;--muted:#b3a6c6;--line:#2e2243;--accent:#ff7eb6;--accent2:#5ce1e6;--accent-soft:#3a1530;--run:#b89cff;--run-soft:#2a1d4d}}
+:root[data-theme="dark"]{--bg:#0d0817;--surface:#171026;--ink:#f3ecfa;--muted:#b3a6c6;--line:#2e2243;--accent:#ff7eb6;--accent2:#5ce1e6;--accent-soft:#3a1530;--run:#b89cff;--run-soft:#2a1d4d}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:1.1rem;line-height:1.65}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible,.btn:focus-visible{outline:3px solid var(--accent2);outline-offset:3px;border-radius:2px}
+.wrap{max-width:860px;margin:0 auto;padding:0 1.25rem;position:relative}
+nav{display:flex;flex-wrap:wrap;gap:.25rem 1.4rem;padding:1.1rem 0;font-family:var(--head);font-weight:500;font-size:.95rem}
+nav a{color:var(--muted);text-decoration:none}nav a:hover{color:var(--accent)}
+header.hero{position:relative;overflow:hidden;padding:3.5rem 0 3rem;border-bottom:2px solid var(--accent)}
+.glow{position:absolute;z-index:0;border-radius:50%;filter:blur(70px);opacity:.35;pointer-events:none;animation:drift 14s ease-in-out infinite alternate}
+.g1{width:300px;height:300px;background:var(--accent);top:-40px;right:-60px}
+.g2{width:260px;height:260px;background:var(--accent2);bottom:-60px;left:-80px;animation-delay:-7s}
+@keyframes drift{to{transform:translate(-50px,40px) scale(1.15)}}
+h1{font-family:var(--head);font-weight:800;font-size:clamp(2.8rem,9vw,5.6rem);line-height:.98;letter-spacing:-.03em;margin:0 0 1rem;color:var(--ink);animation:rise .9s cubic-bezier(.2,.7,.2,1) backwards}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.roles{font-family:var(--head);font-weight:700;font-size:1.35rem;color:var(--accent2);margin:0 0 1.2rem;min-height:1.8em;animation:rise .9s .15s backwards}
+.roles .caret{display:inline-block;width:2px;height:1.1em;background:var(--accent2);margin-left:3px;vertical-align:-.15em;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.hero>*:not(.glow){position:relative;z-index:1}
+.lead{font-size:1.3rem;max-width:34em;margin:0 0 1.6rem;animation:rise .9s .3s backwards}
+.cta{display:flex;flex-wrap:wrap;gap:.7rem}header .cta{animation:rise .9s .45s backwards}
+.btn{font-family:var(--head);font-weight:700;font-size:.98rem;padding:.7rem 1.2rem;border:2px solid var(--accent);color:var(--accent);text-decoration:none;border-radius:99px;transition:transform .2s,background .2s,color .2s}
+.btn.main{background:var(--accent);color:var(--bg)}
+.btn:hover{transform:translateY(-2px);border-color:var(--accent2);color:var(--accent2)}.btn.main:hover{background:var(--accent2);color:var(--bg)}
+section{padding:3rem 0;border-bottom:1px solid var(--line)}
+h2{font-family:var(--head);font-weight:800;font-size:1.9rem;letter-spacing:-.02em;margin:0 0 1.4rem}
+h3{font-family:var(--head);font-weight:700;font-size:1.25rem;margin:0}
+.meta{color:var(--muted);font-style:italic;margin:.15rem 0 .8rem}
+.job ul,.proj ul{margin:.4rem 0 0;padding-left:1.2rem}.job li,.proj li{margin-bottom:.45rem}
+.proj{background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:10px;padding:1.3rem 1.4rem;margin-bottom:1.2rem;transition:transform .25s,box-shadow .25s}
+.proj:hover{transform:translateY(-4px);box-shadow:0 10px 28px -12px var(--accent)}
+.proj.run{border-left-color:var(--run)}
+.row{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:.4rem 1rem}
+.tag{font-family:var(--head);font-weight:700;font-size:.85rem;padding:.15rem .7rem;border-radius:99px;background:var(--accent-soft);color:var(--accent)}
+.tag.run{background:var(--run-soft);color:var(--run);animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.55}}
+.stack{color:var(--muted);font-size:.98rem;margin:.1rem 0 .6rem}
+dl{margin:0;display:grid;grid-template-columns:minmax(9rem,13rem) 1fr;gap:.8rem 1.4rem}
+dt{font-family:var(--head);font-weight:700;color:var(--accent2)}dd{margin:0}
+.cert{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:1.3rem 1.4rem}
+footer{padding:2.5rem 0 3rem;color:var(--muted);font-size:1rem}
+@media (max-width:600px){dl{grid-template-columns:1fr;gap:.1rem}dd{margin-bottom:.8rem}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav aria-label="Sections"><a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#certification">Certification</a><a href="#contact">Contact</a></nav>
+<header class="hero">
+<div class="glow g1"></div><div class="glow g2"></div>
+<h1>Swathi Chidambaram</h1>
+<p class="roles" aria-label="Entrepreneur, QA and automation engineer, cloud builder"><span id="role">Entrepreneur</span><span class="caret"></span></p>
+<p class="lead">Founder of ANIME MAX and a final-year B.Tech student in Cloud Technology and Information Security. I run my own online store, test software, and build cloud projects on AWS.</p>
+<div class="cta"><a class="btn main" href="#projects">See my projects</a><a class="btn" href="mailto:swathiic06@gmail.com">Email me</a><a class="btn" href="https://www.linkedin.com/in/swathi-chidambaram-55519b289/">LinkedIn</a></div>
+</header>
+
+<section id="about">
+<h2>About</h2>
+<p>I’m an entrepreneur. I founded ANIME MAX, an online store for anime and pop-culture merchandise, and I built and run it myself, from the website to shipping. I also study Cloud Technology and Information Security at Jain (Deemed-to-be University), Bengaluru (2023–2027). I recently completed a 3-month SaaS testing internship, where I ran more than 2000 test cases, tested APIs and analyzed Android crashes.</p>
+<p>I write test automation in Python, and I’m an AWS Certified Solutions Architect – Associate. I also built and launched my own online store. I’m looking for a software development or QA internship where I can build clean, well-tested, cloud-based applications.</p>
+</section>
+
+<section id="experience">
+<h2>Experience</h2>
+<div class="job">
+<div class="row"><h3>SaaS Intern – Device Management &amp; QA Testing</h3><span class="meta">Aug 2026 – Oct 2026</span></div>
+<p class="meta">Innominds Software Private Limited, Bengaluru · 3-month internship</p>
+<ul>
+<li>Executed 2000+ functional, sanity and compatibility test cases on a multi-tenant SaaS device-management platform, covering policy enforcement, device enrollment and app distribution.</li>
+<li>Checked API and backend behavior against expected responses and status codes, and caught a 422 returned instead of the expected 409 on a duplicate-record request.</li>
+<li>Analyzed Android logs and crashes with ADB (logcat, dumpsys, bugreport) and documented root causes for developers.</li>
+<li>Found a defect where the Safeguard PIN restriction could be bypassed, and followed it from reproduction to fix verification across devices and builds.</li>
+</ul>
+</div>
+</section>
+
+<section id="projects">
+<h2>Projects</h2>
+
+<article class="proj run">
+<div class="row"><h3>DrainDoc – Smart Stormwater Drain Overflow Detection</h3><span class="tag run">Ongoing</span></div>
+<p class="stack">AWS IoT Core, Lambda, DynamoDB, SNS, CloudWatch</p>
+<p>A cloud-based IoT early-warning system for drain overflow. ESP32 sensors send water levels over MQTT to AWS IoT Core. Lambda processes the data into DynamoDB, and SNS and CloudWatch raise overflow alerts. I also built the DrainWatch dashboard to show live drain status and alerts.</p>
+<p><a href="https://draindoc.lovable.app">Open the DrainWatch dashboard</a></p>
+</article>
+
+<article class="proj">
+<div class="row"><h3>ANIME MAX – Founder &amp; Developer</h3><span class="tag">Live</span></div>
+<p class="stack">React, Vite, Supabase, Clerk, Cloudinary, Vercel, Shiprocket</p>
+<p>My own business: a full-stack online store for anime and pop-culture merchandise, founded, built and launched by me alone. It has OTP login, product categories and filters, a cart and checkout flow, and order confirmation by email or WhatsApp. The database is PostgreSQL on Supabase with row-level security, images are on Cloudinary, shipping runs through Shiprocket, and the site is hosted on Vercel with a custom domain.</p>
+<p><a href="https://animemax.shop">Visit animemax.shop</a></p>
+</article>
+
+<article class="proj run">
+<div class="row"><h3>Multi-Device Test Automation Tool</h3><span class="tag run">In progress</span></div>
+<p class="stack">Python, pytest, Appium, Playwright, ADB</p>
+<p>A server–device framework where one server runs test cases on multiple Android devices at once. I own the device side (Appium with UiAutomator2, ADB, pytest) and am now extending the server side with Playwright scripts for portal workflows such as policy and kiosk component creation.</p>
+</article>
+</section>
+
+<section id="skills">
+<h2>Skills</h2>
+<dl>
+<dt>Cloud</dt><dd>AWS (EC2, S3, IAM, CloudWatch, Lambda, IoT Core, DynamoDB), cloud security</dd>
+<dt>Testing and automation</dt><dd>Functional and API testing, pytest, Appium, Playwright, ADB, Postman</dd>
+<dt>Programming</dt><dd>Python, C++, SQL, data structures and algorithms, OOP</dd>
+<dt>Web and databases</dt><dd>React, Vite, Supabase, Clerk, REST APIs, PostgreSQL, MySQL</dd>
+<dt>Tools</dt><dd>Git, GitHub, VS Code, Android Studio, pandas, NumPy, scikit-learn</dd>
+</dl>
+</section>
+
+<section id="certification">
+<h2>Certification</h2>
+<div class="cert">
+<h3>AWS Certified Solutions Architect – Associate</h3>
+<p class="meta">Amazon Web Services · Issued October 2026, valid until October 2029</p>
+<p>Covers designing secure, resilient, high-performing and cost-optimized architectures on AWS.</p>
+<p><a href="https://www.credly.com/badges/798e4f03-5bac-4ac6-b3f8-dde0c19e8db5/public_url">View the credential on Credly</a></p>
+</div>
+</section>
+
+<section id="contact" style="border-bottom:0">
+<h2>Contact</h2>
+<p>I’m open to software development and QA internships, and to talking about ANIME MAX. The quickest way to reach me is email.</p>
+<div class="cta"><a class="btn main" href="mailto:swathiic06@gmail.com">swathiic06@gmail.com</a><a class="btn" href="https://www.linkedin.com/in/swathi-chidambaram-55519b289/">LinkedIn</a></div>
+</section>
+<footer>© 2026 Swathi Chidambaram · Bengaluru, India</footer>
+</div>
+<script>
+(function(){var el=document.getElementById("role");if(!el)return;
+var roles=["Entrepreneur","QA and automation engineer","Cloud builder"];
+if(window.matchMedia("(prefers-reduced-motion: reduce)").matches){el.textContent=roles.join(" · ");return}
+var i=0,j=0,del=false;
+function tick(){var w=roles[i];el.textContent=w.slice(0,j);
+if(!del&&j<w.length){j++;setTimeout(tick,70)}
+else if(!del){del=true;setTimeout(tick,1400)}
+else if(j>0){j--;setTimeout(tick,35)}
+else{del=false;i=(i+1)%roles.length;setTimeout(tick,250)}}
+tick()})();
+</script>
+</body>
+</html>
